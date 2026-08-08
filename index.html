@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="signal">
+<html lang="en" data-theme="neural">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +9,20 @@
 <meta name="author" content="Rahid Khan">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://rahid-khan.vercel.app/">
-
-<!-- GOOGLE SEARCH CONSOLE VERIFICATION: paste your <meta name="google-site-verification" ...> tag on the line below, then redeploy -->
-
+<meta name="google-site-verification" content="AfuXxCX2MmyF6c1LUlxM_532ZtBzLvcngoV1sMO7AQY" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Rahid Khan Afridi — AI Engineer & Machine Learning Engineer">
 <meta property="og:description" content="AI Engineer & Machine Learning Engineer in Peshawar, Pakistan. Agentic AI, RAG systems, and computer vision — MCP-based research agents, multi-user RAG platforms, and medical image classification.">
 <meta property="og:url" content="https://rahid-khan.vercel.app/">
-<meta property="og:site_name" content="Rahid Khan — AI Engineer OS">
+<meta property="og:site_name" content="Rahid Khan — AI Engineer">
 <meta property="og:image" content="https://rahid-khan.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 <meta property="profile:first_name" content="Rahid">
 <meta property="profile:last_name" content="Khan Afridi">
-<meta name="google-site-verification" content="AfuXxCX2MmyF6c1LUlxM_532ZtBzLvcngoV1sMO7AQY" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -33,11 +30,16 @@
 <meta name="twitter:description" content="AI Engineer & Machine Learning Engineer in Peshawar, Pakistan. Agentic AI, RAG systems, and computer vision.">
 <meta name="twitter:image" content="https://rahid-khan.vercel.app/og-image.png">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230A0E14%22/><circle cx=%2230%22 cy=%2235%22 r=%227%22 fill=%22%236EE7D8%22/><circle cx=%2270%22 cy=%2235%22 r=%227%22 fill=%22%23F5A623%22/><circle cx=%2250%22 cy=%2270%22 r=%227%22 fill=%22%236EE7D8%22/><line x1=%2230%22 y1=%2235%22 x2=%2250%22 y2=%2270%22 stroke=%22%238A96A3%22 stroke-width=%223%22/><line x1=%2270%22 y1=%2235%22 x2=%2250%22 y2=%2270%22 stroke=%22%238A96A3%22 stroke-width=%223%22/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2304070D%22/><circle cx=%2230%22 cy=%2235%22 r=%227%22 fill=%22%2338BDF8%22/><circle cx=%2270%22 cy=%2235%22 r=%227%22 fill=%22%23818CF8%22/><circle cx=%2250%22 cy=%2270%22 r=%227%22 fill=%22%2338BDF8%22/><line x1=%2230%22 y1=%2235%22 x2=%2250%22 y2=%2270%22 stroke=%22%23566a8a%22 stroke-width=%223%22/><line x1=%2270%22 y1=%2235%22 x2=%2250%22 y2=%2270%22 stroke=%22%23566a8a%22 stroke-width=%223%22/><line x1=%2230%22 y1=%2235%22 x2=%2270%22 y2=%2235%22 stroke=%22%23566a8a%22 stroke-width=%223%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://api.github.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Restore saved theme before first paint to avoid a flash of the wrong palette -->
+<script>
+try{ var t = localStorage.getItem('rk-theme'); if (t && ['neural','quantum','matrix'].includes(t)) document.documentElement.setAttribute('data-theme', t); }catch(e){}
+</script>
 
 <!-- Structured data: Person + WebSite schema for name search and topical (AI/ML Engineer) relevance -->
 <script type="application/ld+json">
@@ -74,7 +76,7 @@
       "@type": "WebSite",
       "@id": "https://rahid-khan.vercel.app/#website",
       "url": "https://rahid-khan.vercel.app/",
-      "name": "Rahid Khan — AI Engineer OS",
+      "name": "Rahid Khan — AI Engineer",
       "description": "Portfolio of Rahid Khan (Rahid Khan Afridi), AI Engineer & Machine Learning Engineer in Peshawar, Pakistan.",
       "inLanguage": "en",
       "about": { "@id": "https://rahid-khan.vercel.app/#person" }
@@ -89,76 +91,107 @@
 }
 </script>
 <style>
-
   :root{
-    --bg:#0A0E14; --bg-raised:#10151D; --surface:#141A23; --surface-border:#232B37;
-    --text:#E8EDF2; --text-muted:#8A96A3; --text-faint:#586170;
-    --accent:#6EE7D8; --accent-dim:rgba(110,231,216,0.12);
-    --accent2:#F5A623; --accent2-dim:rgba(245,166,35,0.12);
-    --good:#8FE39A;
-    --err:#F76E6E;
-    --ink-dark-bg:#0D1117; --ink-dark-surface:#151B23; --ink-dark-border:#232B37; --ink-dark-text:#B8D8D4;
-    --font-display:'Space Grotesk', sans-serif; --font-body:'IBM Plex Sans', sans-serif; --font-mono:'IBM Plex Mono', monospace;
+    --bg:#04070D; --bg-raised:#0A101B; --surface:#0C1320; --surface-border:#1A2536;
+    --text:#E8EEF7; --text-muted:#93A1B5; --text-faint:#5A6880;
+    --accent:#38BDF8; --accent-rgb:56,189,248; --accent-dim:rgba(56,189,248,0.10);
+    --accent2:#818CF8; --accent2-rgb:129,140,248; --accent2-dim:rgba(129,140,248,0.12);
+    --grad:linear-gradient(120deg,var(--accent) 0%,var(--accent2) 100%);
+    --good:#34D399; --err:#F87171;
+    --ink-dark-bg:#070B12; --ink-dark-surface:#0D1420; --ink-dark-border:#1A2536; --ink-dark-text:#A9C6E8;
+    --font-display:'Space Grotesk', sans-serif; --font-body:'Inter', sans-serif; --font-mono:'JetBrains Mono', monospace;
     --maxw:1180px;
+    --glow:0 0 0 1px rgba(var(--accent-rgb),0.25), 0 8px 40px -8px rgba(var(--accent-rgb),0.25);
   }
-  html[data-theme="violet"]{ --accent:#B29BFF; --accent-dim:rgba(178,155,255,0.12); --accent2:#38E1F2; --accent2-dim:rgba(56,225,242,0.12); }
-  html[data-theme="mono"]{ --accent:#EDEDED; --accent-dim:rgba(237,237,237,0.10); --accent2:#9A9A9A; --accent2-dim:rgba(154,154,154,0.12); }
+  html[data-theme="quantum"]{
+    --accent:#A78BFA; --accent-rgb:167,139,250; --accent-dim:rgba(167,139,250,0.10);
+    --accent2:#F472B6; --accent2-rgb:244,114,182; --accent2-dim:rgba(244,114,182,0.12);
+  }
+  html[data-theme="matrix"]{
+    --accent:#4ADE80; --accent-rgb:74,222,128; --accent-dim:rgba(74,222,128,0.10);
+    --accent2:#A3E635; --accent2-rgb:163,230,53; --accent2-dim:rgba(163,230,53,0.12);
+  }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;} }
-  body{ background:var(--bg); color:var(--text); font-family:var(--font-body); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  body{ background:var(--bg); color:var(--text); font-family:var(--font-body); line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   a{color:inherit; text-decoration:none;}
   img{max-width:100%; display:block;}
-  ::selection{background:var(--accent); color:#0A0E14;}
+  ::selection{background:var(--accent); color:#04070D;}
   :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:2px;}
+
+  /* layered high-tech backdrop: grid + glow + neural canvas */
+  body::before{
+    content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      linear-gradient(rgba(var(--accent-rgb),0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--accent-rgb),0.035) 1px, transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 75%);
+  }
+  body::after{
+    content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 60% 45% at 70% -10%, rgba(var(--accent2-rgb),0.10), transparent 65%),
+      radial-gradient(ellipse 55% 40% at 15% 5%, rgba(var(--accent-rgb),0.08), transparent 60%);
+  }
+  #bgCanvas{position:fixed; inset:0; z-index:0; opacity:.5; pointer-events:none;}
+
+  .skip-link{position:absolute; left:-9999px; top:0; z-index:300; background:var(--accent); color:#04070D; padding:10px 18px; border-radius:0 0 8px 0; font-family:var(--font-mono); font-size:13px; font-weight:600;}
+  .skip-link:focus{left:0;}
+
+  #scrollProgress{position:fixed; top:0; left:0; height:2px; width:0%; z-index:60; background:var(--grad); box-shadow:0 0 12px rgba(var(--accent-rgb),0.7);}
+
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px; position:relative; z-index:1;}
   .mono{font-family:var(--font-mono);}
   .eyebrow{ font-family:var(--font-mono); font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); display:flex; align-items:center; gap:10px; margin-bottom:18px; }
-  .eyebrow::before{content:''; width:20px; height:1px; background:var(--accent); display:inline-block;}
+  .eyebrow::before{content:''; width:22px; height:1px; background:var(--grad); display:inline-block;}
   h1,h2,h3{font-family:var(--font-display); font-weight:600; letter-spacing:-0.01em;}
   section{padding:110px 0; border-bottom:1px solid var(--surface-border); position:relative;}
   .section-head{max-width:660px; margin-bottom:56px;}
   .section-head h2{font-size:clamp(28px,4vw,40px); margin-bottom:14px;}
   .section-head p{color:var(--text-muted); font-size:16px;}
-  .note{font-family:var(--font-mono); font-size:12px; color:var(--text-faint); margin-top:8px;}
+  .grad-text{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
 
-  /* background canvas */
-  #bgCanvas{position:fixed; inset:0; z-index:0; opacity:.55; pointer-events:none;}
-
-  /* boot overlay */
-  #boot{position:fixed; inset:0; z-index:200; background:#05070A; display:flex; align-items:center; justify-content:center; flex-direction:column; cursor:pointer;}
-  #boot .boot-box{width:min(520px,86vw); font-family:var(--font-mono); font-size:13.5px; color:#7FE0D2;}
-  #boot .boot-line{opacity:0; margin-bottom:9px; animation:bootIn .35s forwards;}
-  #boot .bar{height:3px; background:#182028; border-radius:3px; margin-top:18px; overflow:hidden;}
-  #boot .bar-fill{height:100%; width:0%; background:linear-gradient(90deg,var(--accent),var(--accent2)); transition:width 1.8s cubic-bezier(.2,.7,.3,1);}
-  #boot .skip{margin-top:20px; font-size:10.5px; color:#586170; text-align:center;}
-  @keyframes bootIn{ to{opacity:1;} }
-  #boot.hide{ animation:bootOut .5s forwards; }
-  @keyframes bootOut{ to{opacity:0; visibility:hidden;} }
+  /* scroll reveal */
+  [data-reveal]{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1);}
+  [data-reveal].in{opacity:1; transform:none;}
 
   @keyframes blip{0%,100%{opacity:1;}50%{opacity:.25;}}
 
-  /* universal top nav (replaces old fixed side rail) */
-  .topnav{display:flex; position:fixed; top:0; left:0; right:0; z-index:50; background:rgba(10,14,20,0.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--surface-border); padding:14px 20px; align-items:center; justify-content:space-between; gap:14px;}
-  .topnav .brand{font-family:var(--font-mono); font-size:13px; color:var(--accent); display:flex; align-items:center; gap:8px;}
-  .topnav .brand .blip{width:6px; height:6px; border-radius:50%; background:var(--accent2); animation:blip 2s infinite;}
+  /* top navigation */
+  .topnav{display:flex; position:fixed; top:0; left:0; right:0; z-index:50; background:rgba(4,7,13,0.75); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--surface-border); padding:14px 24px; align-items:center; justify-content:space-between; gap:14px;}
+  .topnav .brand{font-family:var(--font-mono); font-size:13px; color:var(--text); display:flex; align-items:center; gap:9px; font-weight:600;}
+  .topnav .brand .blip{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent); animation:blip 2.2s infinite;}
+  .topnav .brand .b-sub{color:var(--text-faint); font-weight:400;}
+  .nav-links{display:flex; gap:4px; align-items:center;}
+  .nav-links a{font-family:var(--font-mono); font-size:12px; color:var(--text-muted); padding:7px 11px; border-radius:6px; transition:color .15s ease, background .15s ease;}
+  .nav-links a:hover{color:var(--text); background:var(--accent-dim);}
+  .nav-links a.active{color:var(--accent); background:var(--accent-dim);}
   .topnav .nav-right{display:flex; align-items:center; gap:12px;}
-  .topnav .theme-swatches{display:flex; gap:6px;}
-  .topnav .theme-swatches button{width:15px; height:15px; border-radius:50%; border:1px solid var(--surface-border); cursor:pointer; padding:0;}
-  .topnav .theme-swatches button[data-t="signal"]{background:#6EE7D8;}
-  .topnav .theme-swatches button[data-t="violet"]{background:#B29BFF;}
-  .topnav .theme-swatches button[data-t="mono"]{background:#EDEDED;}
-  .topnav button.menu-btn{background:none; border:1px solid var(--surface-border); color:var(--text); padding:8px 12px; border-radius:6px; font-family:var(--font-mono); font-size:12px; cursor:pointer;}
-  .mobile-menu{display:none; position:fixed; top:53px; left:0; right:0; background:var(--surface); border-bottom:1px solid var(--surface-border); z-index:49; padding:10px 20px 20px; max-height:80vh; overflow-y:auto;}
+  .topnav .theme-swatches{display:flex; gap:7px; align-items:center;}
+  .topnav .theme-swatches button{width:16px; height:16px; border-radius:50%; border:1px solid var(--surface-border); cursor:pointer; padding:0; transition:transform .15s ease, box-shadow .15s ease;}
+  .topnav .theme-swatches button:hover{transform:scale(1.2);}
+  .topnav .theme-swatches button.active{box-shadow:0 0 0 2px var(--bg), 0 0 0 3.5px var(--accent);}
+  .topnav .theme-swatches button[data-t="neural"]{background:linear-gradient(135deg,#38BDF8,#818CF8);}
+  .topnav .theme-swatches button[data-t="quantum"]{background:linear-gradient(135deg,#A78BFA,#F472B6);}
+  .topnav .theme-swatches button[data-t="matrix"]{background:linear-gradient(135deg,#4ADE80,#A3E635);}
+  .topnav button.menu-btn{display:none; background:none; border:1px solid var(--surface-border); color:var(--text); padding:8px 12px; border-radius:6px; font-family:var(--font-mono); font-size:12px; cursor:pointer;}
+  .mobile-menu{display:none; position:fixed; top:53px; left:0; right:0; background:rgba(7,11,18,0.97); backdrop-filter:blur(14px); border-bottom:1px solid var(--surface-border); z-index:49; padding:10px 20px 20px; max-height:80vh; overflow-y:auto;}
   .mobile-menu.open{display:block;}
   .mobile-menu a{display:block; padding:12px 4px; font-family:var(--font-mono); font-size:13px; color:var(--text-muted); border-bottom:1px solid var(--surface-border);}
+  @media (max-width:980px){
+    .nav-links{display:none;}
+    .topnav button.menu-btn{display:block;}
+  }
 
   main{margin-left:0; padding-top:78px; position:relative; z-index:1;}
 
   /* command palette */
-  #cmdk-overlay{position:fixed; inset:0; background:rgba(5,7,10,0.7); backdrop-filter:blur(3px); z-index:150; display:none; align-items:flex-start; justify-content:center; padding-top:12vh;}
+  #cmdk-overlay{position:fixed; inset:0; background:rgba(2,4,8,0.72); backdrop-filter:blur(4px); z-index:150; display:none; align-items:flex-start; justify-content:center; padding-top:12vh;}
   #cmdk-overlay.open{display:flex;}
-  #cmdk-box{width:min(560px,90vw); background:var(--ink-dark-bg); border:1px solid var(--ink-dark-border); border-radius:12px; overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,0.4);}
+  #cmdk-box{width:min(560px,90vw); background:var(--ink-dark-bg); border:1px solid var(--ink-dark-border); border-radius:14px; overflow:hidden; box-shadow:0 0 0 1px rgba(var(--accent-rgb),0.15), 0 30px 80px rgba(0,0,0,0.5);}
   #cmdk-box input{width:100%; background:var(--ink-dark-surface); border:none; border-bottom:1px solid var(--ink-dark-border); padding:16px 18px; color:var(--ink-dark-text); font-family:var(--font-mono); font-size:14px;}
   #cmdk-box input:focus{outline:none;}
   #cmdk-list{max-height:340px; overflow-y:auto; padding:8px;}
@@ -166,66 +199,76 @@
   #cmdk-list .item.sel, #cmdk-list .item:hover{background:var(--accent-dim); color:var(--accent);}
   #cmdk-list .item .k{color:var(--text-faint); font-size:11px;}
   .cmdk-hint{padding:9px 16px; font-family:var(--font-mono); font-size:10.5px; color:var(--text-faint); border-top:1px solid var(--ink-dark-border);}
-  .cmdk-btn{position:fixed; bottom:22px; right:22px; z-index:45; background:var(--surface); border:1px solid var(--surface-border); color:var(--text-muted); font-family:var(--font-mono); font-size:11.5px; padding:10px 14px; border-radius:20px; display:flex; align-items:center; gap:8px; cursor:pointer;}
+  .cmdk-btn{position:fixed; bottom:22px; right:22px; z-index:45; background:rgba(12,19,32,0.85); backdrop-filter:blur(10px); border:1px solid var(--surface-border); color:var(--text-muted); font-family:var(--font-mono); font-size:11.5px; padding:10px 14px; border-radius:20px; display:flex; align-items:center; gap:8px; cursor:pointer; transition:border-color .2s ease;}
+  .cmdk-btn:hover{border-color:var(--accent);}
   .cmdk-btn kbd{background:var(--bg-raised); border:1px solid var(--surface-border); border-radius:4px; padding:2px 6px; font-size:10px;}
   @media (max-width:980px){ .cmdk-btn{display:none;} }
 
   /* hero */
-  .hero{min-height:100vh; display:flex; align-items:center; padding:150px 0 80px; border-bottom:1px solid var(--surface-border); overflow:hidden;}
-  .hero .wrap{display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center;}
-  .hero-super{font-size:clamp(30px,4.6vw,50px); line-height:1.1; margin-bottom:10px;}
-  .hero-super .accent-word{color:var(--accent); font-size:0.72em; display:inline-block; margin-top:6px;}
-  .hero-name{font-family:var(--font-mono); font-size:15px; color:var(--text-muted); margin-bottom:22px; letter-spacing:.04em;}
+  .hero{min-height:calc(100vh - 78px); display:flex; align-items:center; padding:80px 0; border-bottom:1px solid var(--surface-border); overflow:hidden;}
+  .hero .wrap{display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center;}
+  .hero-super{font-size:clamp(34px,5vw,58px); line-height:1.08; margin-bottom:14px;}
+  .hero-super .accent-word{font-size:0.66em; display:block; margin-top:10px;}
+  .hero-name{font-family:var(--font-mono); font-size:14px; color:var(--text-muted); margin-bottom:20px; letter-spacing:.04em;}
   .hero-name b{color:var(--text); font-weight:600;}
   .hero-roles{font-family:var(--font-mono); color:var(--accent); font-size:15px; margin-bottom:22px; min-height:22px;}
+  .hero-roles .prefix{color:var(--text-faint);}
   .hero-roles .cursor{display:inline-block; width:8px; height:16px; background:var(--accent); margin-left:2px; vertical-align:middle; animation:caret 1s steps(1) infinite;}
   @keyframes caret{50%{opacity:0;}}
-  .hero p.lede{color:var(--text-muted); font-size:16px; max-width:520px; margin-bottom:28px;}
-  .stat-strip{display:grid; grid-template-columns:repeat(4,auto); gap:22px; margin-bottom:32px;}
-  .stat{}
-  .stat .num{font-family:var(--font-display); font-size:24px; color:var(--text); font-weight:700;}
-  .stat .num .accent-t{color:var(--accent);}
+  .hero p.lede{color:var(--text-muted); font-size:16.5px; max-width:520px; margin-bottom:30px;}
+  .stat-strip{display:grid; grid-template-columns:repeat(4,auto); gap:26px; margin-bottom:34px;}
+  .stat .num{font-family:var(--font-display); font-size:26px; color:var(--text); font-weight:700;}
   .stat .lbl{font-family:var(--font-mono); font-size:10.5px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.05em; margin-top:2px;}
   .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
-  .btn{ font-family:var(--font-mono); font-size:13px; letter-spacing:.03em; padding:13px 22px; border-radius:8px; display:inline-flex; align-items:center; gap:8px; transition:all .2s ease; border:1px solid transparent; cursor:pointer; background:none;}
-  .btn-primary{background:var(--accent); color:#0A0E14; font-weight:600;}
-  .btn-primary:hover{filter:brightness(1.12); transform:translateY(-2px);}
+  .btn{ font-family:var(--font-mono); font-size:13px; letter-spacing:.03em; padding:13px 22px; border-radius:9px; display:inline-flex; align-items:center; gap:8px; transition:all .2s ease; border:1px solid transparent; cursor:pointer; background:none;}
+  .btn-primary{background:var(--accent); color:#04070D; font-weight:600; box-shadow:0 4px 24px -6px rgba(var(--accent-rgb),0.5);}
+  .btn-primary:hover{filter:brightness(1.12); transform:translateY(-2px); box-shadow:0 8px 32px -6px rgba(var(--accent-rgb),0.6);}
   .btn-ghost{border-color:var(--surface-border); color:var(--text);}
-  .btn-ghost:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-2px);}
-  .hero-visual{position:relative; aspect-ratio:1/1; border:1px solid var(--surface-border); border-radius:16px; background:radial-gradient(circle at 50% 40%, #101823 0%, #0A0E14 75%); overflow:hidden;}
+  .btn-ghost:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-2px); box-shadow:0 4px 20px -8px rgba(var(--accent-rgb),0.4);}
+  .hero-visual{position:relative; aspect-ratio:1/1; border:1px solid var(--surface-border); border-radius:18px; background:radial-gradient(circle at 50% 40%, rgba(var(--accent-rgb),0.06) 0%, var(--bg) 75%); overflow:hidden; box-shadow:inset 0 0 60px rgba(var(--accent-rgb),0.04), 0 0 60px -20px rgba(var(--accent-rgb),0.2);}
   .hero-visual canvas{width:100%; height:100%; display:block;}
-  .hero-visual .tag{position:absolute; bottom:14px; left:14px; font-family:var(--font-mono); font-size:10.5px; color:var(--text-faint); background:rgba(10,14,20,0.7); padding:5px 9px; border-radius:5px; border:1px solid var(--ink-dark-border);}
-  .hero-visual .live{position:absolute; top:14px; right:14px; font-family:var(--font-mono); font-size:9.5px; color:var(--good); background:rgba(143,227,154,0.08); border:1px solid rgba(143,227,154,0.3); padding:5px 9px; border-radius:12px; display:flex; align-items:center; gap:5px;}
+  .hero-visual .tag{position:absolute; bottom:14px; left:14px; font-family:var(--font-mono); font-size:10.5px; color:var(--text-faint); background:rgba(4,7,13,0.75); padding:5px 9px; border-radius:5px; border:1px solid var(--ink-dark-border);}
+  .hero-visual .live{position:absolute; top:14px; right:14px; font-family:var(--font-mono); font-size:9.5px; color:var(--good); background:rgba(52,211,153,0.08); border:1px solid rgba(52,211,153,0.3); padding:5px 9px; border-radius:12px; display:flex; align-items:center; gap:5px;}
   .hero-visual .live .d{width:5px; height:5px; border-radius:50%; background:var(--good); animation:blip 2s infinite;}
+  .hero-visual .corner{position:absolute; width:18px; height:18px; border-color:rgba(var(--accent-rgb),0.5); border-style:solid; border-width:0;}
+  .hero-visual .corner.tl{top:10px; left:10px; border-top-width:2px; border-left-width:2px; border-top-left-radius:6px;}
+  .hero-visual .corner.br{bottom:10px; right:10px; border-bottom-width:2px; border-right-width:2px; border-bottom-right-radius:6px;}
 
+  /* about */
   .about-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:60px;}
   .about-grid p{color:var(--text-muted); font-size:16px; margin-bottom:18px;}
   .about-grid p strong{color:var(--text); font-weight:600;}
   .about-cards{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
-  .fact-card{background:var(--surface); border:1px solid var(--surface-border); border-radius:12px; padding:18px 20px;}
+  .fact-card{background:var(--surface); border:1px solid var(--surface-border); border-radius:12px; padding:18px 20px; transition:border-color .2s ease;}
+  .fact-card:hover{border-color:rgba(var(--accent-rgb),0.4);}
   .fact-card .k{font-family:var(--font-mono); font-size:10.5px; color:var(--accent); text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px;}
   .fact-card .v{font-size:13.5px; color:var(--text);}
 
+  /* skills */
   .skills-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px;}
-  .skill-card{background:var(--surface); border:1px solid var(--surface-border); border-radius:12px; padding:24px; transition:border-color .2s ease, transform .2s ease;}
-  .skill-card:hover{border-color:var(--accent); transform:translateY(-3px);}
-  .skill-card h3{font-size:14px; font-family:var(--font-mono); color:var(--accent2); text-transform:uppercase; letter-spacing:.05em; margin-bottom:16px; font-weight:600;}
+  .skill-card{background:var(--surface); border:1px solid var(--surface-border); border-radius:14px; padding:24px; transition:border-color .2s ease, transform .2s ease, box-shadow .2s ease;}
+  .skill-card:hover{border-color:rgba(var(--accent-rgb),0.5); transform:translateY(-3px); box-shadow:0 12px 40px -12px rgba(var(--accent-rgb),0.25);}
+  .skill-card h3{font-size:13.5px; font-family:var(--font-mono); color:var(--accent2); text-transform:uppercase; letter-spacing:.05em; margin-bottom:16px; font-weight:600;}
   .chip-row{display:flex; flex-wrap:wrap; gap:8px;}
   .chip{font-family:var(--font-mono); font-size:12px; color:var(--text-muted); background:var(--bg-raised); border:1px solid var(--surface-border); padding:6px 10px; border-radius:6px; cursor:pointer; transition:all .15s ease;}
   .chip:hover{border-color:var(--accent); color:var(--accent);}
   .chip.hit{border-color:var(--accent2); color:var(--accent2); background:var(--accent2-dim);}
   .chip-used{font-family:var(--font-mono); font-size:9.5px; color:var(--text-faint); margin-top:8px;}
 
+  /* timeline */
   .timeline{position:relative; padding-left:32px; border-left:1px solid var(--surface-border);}
   .t-item{position:relative; padding-bottom:44px;}
   .t-item:last-child{padding-bottom:0;}
-  .t-item::before{content:''; position:absolute; left:-37.5px; top:4px; width:10px; height:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-dim);}
+  .t-item::before{content:''; position:absolute; left:-37.5px; top:4px; width:10px; height:10px; border-radius:50%; background:var(--grad); box-shadow:0 0 0 4px var(--accent-dim), 0 0 14px rgba(var(--accent-rgb),0.6);}
   .t-item .t-date{font-family:var(--font-mono); font-size:12px; color:var(--accent2); margin-bottom:6px; letter-spacing:.04em;}
   .t-item h3{font-size:19px; margin-bottom:4px;}
   .t-item .t-sub{color:var(--text-muted); font-size:14px;}
 
-  .project{background:var(--surface); border:1px solid var(--surface-border); border-radius:14px; padding:32px; margin-bottom:26px; transition:border-color .2s ease;}
-  .project:hover{border-color:var(--accent);}
+  /* projects */
+  .project{background:var(--surface); border:1px solid var(--surface-border); border-radius:16px; padding:32px; margin-bottom:26px; transition:border-color .2s ease, box-shadow .2s ease; position:relative; overflow:hidden;}
+  .project::before{content:''; position:absolute; top:0; left:0; right:0; height:1px; background:var(--grad); opacity:0; transition:opacity .25s ease;}
+  .project:hover{border-color:rgba(var(--accent-rgb),0.45); box-shadow:0 16px 50px -16px rgba(var(--accent-rgb),0.2);}
+  .project:hover::before{opacity:1;}
   .project-top{display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:6px; flex-wrap:wrap;}
   .project h3{font-size:22px;}
   .project .p-links{display:flex; gap:10px; font-family:var(--font-mono); font-size:12px;}
@@ -234,7 +277,7 @@
   .project .p-problem{color:var(--text-muted); font-size:15px; margin:14px 0 18px; max-width:780px;}
   .metric-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px;}
   .metric{background:var(--bg-raised); border:1px solid var(--surface-border); border-radius:9px; padding:10px 14px; min-width:96px;}
-  .metric .mv{font-family:var(--font-display); font-size:18px; color:var(--accent); font-weight:700;}
+  .metric .mv{font-family:var(--font-display); font-size:18px; font-weight:700; background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
   .metric .ml{font-family:var(--font-mono); font-size:9.5px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.04em;}
   .arch-label{font-family:var(--font-mono); font-size:11px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:10px;}
   .arch-flow{display:flex; align-items:center; flex-wrap:wrap; gap:0; margin-bottom:22px; background:var(--bg-raised); border:1px solid var(--surface-border); border-radius:10px; padding:18px;}
@@ -244,33 +287,31 @@
   .project ul li{color:var(--text-muted); font-size:14px; padding-left:18px; position:relative; margin-bottom:7px;}
   .project ul li::before{content:'→'; position:absolute; left:0; color:var(--accent);}
 
-  .cert-card{background:var(--surface); border:1px solid var(--surface-border); border-radius:12px; padding:22px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:12px;}
-  .cert-card .c-name{font-size:16px; font-weight:600;}
-  .cert-card .c-meta{color:var(--text-muted); font-size:13.5px; font-family:var(--font-mono);}
-  .lang-row{display:flex; gap:12px; margin-top:24px; flex-wrap:wrap;}
-  .lang-pill{font-family:var(--font-mono); font-size:13px; background:var(--accent2-dim); color:var(--accent2); border:1px solid var(--accent2-dim); padding:8px 16px; border-radius:20px;}
-
+  /* research */
   .research-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px;}
-  .research-card{background:var(--surface); border:1px solid var(--surface-border); border-radius:12px; padding:24px;}
+  .research-card{background:var(--surface); border:1px solid var(--surface-border); border-radius:14px; padding:24px; transition:border-color .2s ease, box-shadow .2s ease;}
+  .research-card:hover{border-color:rgba(var(--accent-rgb),0.45); box-shadow:0 12px 40px -12px rgba(var(--accent-rgb),0.2);}
   .research-card h3{font-size:16px; margin-bottom:10px; color:var(--accent);}
   .research-card p{color:var(--text-muted); font-size:14px;}
 
-  .gh-panel{background:var(--surface); border:1px solid var(--surface-border); border-radius:14px; padding:28px; display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center;}
-  .gh-panel img{width:72px; height:72px; border-radius:50%; border:1px solid var(--surface-border);}
+  /* github */
+  .gh-panel{background:var(--surface); border:1px solid var(--surface-border); border-radius:16px; padding:28px; display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center;}
+  .gh-panel img{width:72px; height:72px; border-radius:50%; border:2px solid transparent; background:var(--grad); padding:2px;}
   .gh-stats{display:flex; gap:28px; flex-wrap:wrap; margin-top:6px;}
-  .gh-stats .s{}
   .gh-stats .s .v{font-family:var(--font-display); font-size:22px; font-weight:700; color:var(--accent);}
   .gh-stats .s .l{font-family:var(--font-mono); font-size:10.5px; color:var(--text-faint); text-transform:uppercase;}
   .gh-repos{margin-top:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px;}
-  .gh-repo{background:var(--bg-raised); border:1px solid var(--surface-border); border-radius:9px; padding:14px 16px;}
+  .gh-repo{background:var(--bg-raised); border:1px solid var(--surface-border); border-radius:10px; padding:14px 16px; transition:border-color .2s ease;}
+  .gh-repo:hover{border-color:rgba(var(--accent-rgb),0.45);}
   .gh-repo .rn{font-family:var(--font-mono); font-size:13px; color:var(--text); margin-bottom:4px;}
   .gh-repo .rd{font-size:12.5px; color:var(--text-muted);}
   .gh-repo .rl{font-family:var(--font-mono); font-size:10.5px; color:var(--accent2); margin-top:6px;}
   .gh-fallback{font-family:var(--font-mono); font-size:12.5px; color:var(--text-faint);}
-  .gh-live{display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--good); margin-left:10px;}
+  .gh-live{display:inline-flex; align-items:center; gap:6px; font-family:var(--font-mono); font-size:10px; color:var(--good); margin-left:10px; text-transform:none; letter-spacing:0;}
   .gh-live .d{width:5px; height:5px; border-radius:50%; background:var(--good); animation:blip 2s infinite;}
 
-  .term-wrap{background:var(--ink-dark-bg); border:1px solid var(--ink-dark-border); border-radius:12px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.25);}
+  /* terminal */
+  .term-wrap{background:var(--ink-dark-bg); border:1px solid var(--ink-dark-border); border-radius:14px; overflow:hidden; box-shadow:0 0 0 1px rgba(var(--accent-rgb),0.08), 0 20px 60px rgba(0,0,0,0.35);}
   .term-bar{display:flex; align-items:center; gap:8px; padding:12px 16px; background:var(--ink-dark-surface); border-bottom:1px solid var(--ink-dark-border);}
   .term-bar .dot{width:11px; height:11px; border-radius:50%;}
   .term-bar .r{background:#FF5F56;} .term-bar .y{background:#FFBD2E;} .term-bar .g{background:#27C93F;}
@@ -286,33 +327,33 @@
   #terminal-input:focus{outline:none;}
   .term-hint{color:var(--text-faint); font-size:12px; font-family:var(--font-mono); margin-top:10px;}
 
-  .chat-wrap{background:var(--surface); border:1px solid var(--surface-border); border-radius:14px; overflow:hidden; margin-top:26px;}
-  .chat-head{padding:16px 20px; border-bottom:1px solid var(--surface-border); font-family:var(--font-mono); font-size:12.5px; color:var(--text-faint); display:flex; justify-content:space-between; align-items:center;}
+  /* chat */
+  .chat-wrap{background:var(--surface); border:1px solid var(--surface-border); border-radius:16px; overflow:hidden; margin-top:26px;}
+  .chat-head{padding:16px 20px; border-bottom:1px solid var(--surface-border); font-family:var(--font-mono); font-size:12.5px; color:var(--text-faint); display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;}
   #chat-log{height:280px; overflow-y:auto; padding:18px 20px; display:flex; flex-direction:column; gap:14px;}
   .msg{max-width:80%; padding:11px 15px; border-radius:11px; font-size:14px; line-height:1.55;}
-  .msg.user{align-self:flex-end; background:var(--accent-dim); color:var(--text); border:1px solid var(--surface-border);}
+  .msg.user{align-self:flex-end; background:var(--accent-dim); color:var(--text); border:1px solid rgba(var(--accent-rgb),0.25);}
   .msg.bot{align-self:flex-start; background:var(--bg-raised); border:1px solid var(--surface-border); color:var(--text-muted);}
   .chat-suggest{display:flex; flex-wrap:wrap; gap:8px; padding:0 20px 16px;}
-  .chat-suggest button{font-family:var(--font-mono); font-size:11.5px; background:var(--bg-raised); border:1px solid var(--surface-border); color:var(--text-muted); padding:7px 11px; border-radius:14px; cursor:pointer;}
+  .chat-suggest button{font-family:var(--font-mono); font-size:11.5px; background:var(--bg-raised); border:1px solid var(--surface-border); color:var(--text-muted); padding:7px 11px; border-radius:14px; cursor:pointer; transition:all .15s ease;}
   .chat-suggest button:hover{border-color:var(--accent); color:var(--accent);}
   .chat-input-row{display:flex; gap:8px; padding:14px 20px; border-top:1px solid var(--surface-border);}
   .chat-input-row input{flex:1; background:var(--bg-raised); border:1px solid var(--surface-border); border-radius:8px; padding:11px 14px; color:var(--text); font-size:14px;}
   .chat-input-row input:focus{outline:none; border-color:var(--accent);}
-  .chat-input-row button{background:var(--accent); color:#0A0E14; border:none; border-radius:8px; padding:0 18px; font-family:var(--font-mono); font-size:12.5px; font-weight:600; cursor:pointer;}
+  .chat-input-row button{background:var(--accent); color:#04070D; border:none; border-radius:8px; padding:0 18px; font-family:var(--font-mono); font-size:12.5px; font-weight:600; cursor:pointer;}
 
+  /* contact */
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;}
   .contact-links{display:flex; flex-direction:column; gap:2px;}
   .contact-links a{display:flex; justify-content:space-between; align-items:center; padding:20px 4px; border-bottom:1px solid var(--surface-border); font-family:var(--font-mono); font-size:15px; transition:padding-left .2s ease, color .2s ease;}
   .contact-links a:hover{padding-left:10px; color:var(--accent);}
   .contact-links a .lbl{color:var(--text-faint); font-size:11px; text-transform:uppercase; letter-spacing:.08em; display:block; margin-bottom:4px;}
-  .avail-badge{display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12.5px; color:var(--good); background:rgba(143,227,154,0.08); border:1px solid rgba(143,227,154,0.25); padding:9px 14px; border-radius:20px; margin-bottom:22px;}
-  .avail-badge .dot{width:7px; height:7px; border-radius:50%; background:var(--good); animation:blip 2s infinite;}
   .contact-facts{display:flex; gap:18px; flex-wrap:wrap; margin-top:22px; font-family:var(--font-mono); font-size:12px; color:var(--text-faint);}
 
-  footer{padding:36px 0; text-align:center; font-family:var(--font-mono); font-size:12px; color:var(--text-faint);}
+  footer{padding:36px 0; text-align:center; font-family:var(--font-mono); font-size:12px; color:var(--text-faint); position:relative; z-index:1;}
 
   @media (max-width:980px){
-    .hero{padding-top:110px;} .hero .wrap{grid-template-columns:1fr;}
+    .hero{padding-top:40px;} .hero .wrap{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;} .contact-grid{grid-template-columns:1fr;}
     .gh-panel{grid-template-columns:1fr; text-align:center;} .gh-panel img{margin:0 auto;}
     .gh-stats{justify-content:center;}
@@ -325,32 +366,39 @@
 </head>
 <body>
 
-<div id="boot">
-  <div class="boot-box" id="bootLines"></div>
-</div>
-
+<a href="#hero" class="skip-link">Skip to content</a>
+<div id="scrollProgress" aria-hidden="true"></div>
 <canvas id="bgCanvas" aria-hidden="true"></canvas>
 
-<div class="topnav">
-  <span class="brand"><span class="blip"></span>Rahid Khan</span>
+<nav class="topnav" aria-label="Main navigation">
+  <a href="#hero" class="brand"><span class="blip"></span>rahid.khan<span class="b-sub">/ai-engineer</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#github">GitHub</a>
+    <a href="#terminal">Playground</a>
+    <a href="#contact">Contact</a>
+  </div>
   <div class="nav-right">
-    <div class="theme-swatches">
-      <button data-t="signal" aria-label="Signal theme"></button>
-      <button data-t="violet" aria-label="Violet theme"></button>
-      <button data-t="mono" aria-label="Mono theme"></button>
+    <div class="theme-swatches" role="group" aria-label="Color theme">
+      <button data-t="neural" aria-label="Neural theme (blue)" title="Neural"></button>
+      <button data-t="quantum" aria-label="Quantum theme (violet)" title="Quantum"></button>
+      <button data-t="matrix" aria-label="Matrix theme (green)" title="Matrix"></button>
     </div>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu">MENU</button>
   </div>
-</div>
+</nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#hero">00 · System</a>
-  <a href="#about">01 · Knowledge</a>
-  <a href="#skills">02 · Modules</a>
+  <a href="#hero">00 · Home</a>
+  <a href="#about">01 · About</a>
+  <a href="#skills">02 · Skills</a>
   <a href="#timeline">03 · Timeline</a>
   <a href="#projects">04 · Projects</a>
   <a href="#research">05 · Research</a>
   <a href="#github">06 · GitHub</a>
-  <a href="#terminal">07 · Terminal</a>
+  <a href="#terminal">07 · Playground</a>
   <a href="#contact">08 · Contact</a>
 </div>
 
@@ -368,20 +416,20 @@
   <section class="hero" id="hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow">System status: online</p>
-        <h1 class="hero-super">Rahid Khan<br><span class="accent-word">Building Autonomous AI Systems</span></h1>
-        <p class="hero-name">AI / Machine Learning Engineer <span class="mono" style="color:var(--text-faint)">— also written as <b>Rahid Khan Afridi</b></span></p>
-        <p class="hero-roles" id="roleTyper">AI Engineer<span class="cursor"></span></p>
-        <p class="lede">AI undergraduate building agentic research systems, retrieval pipelines, and computer-vision models — with hands-on delivery from PyTorch training loops to production Flask/FastAPI deployments.</p>
+        <p class="hero-name" style="margin-bottom:10px;">Hi, I'm</p>
+        <h1 class="hero-super">Rahid Khan<span class="accent-word grad-text">I build autonomous AI systems</span></h1>
+        <p class="hero-roles" id="roleTyper"><span class="prefix">&gt;</span> AI Engineer<span class="cursor"></span></p>
+        <p class="lede">I'm an AI undergraduate who loves taking ideas all the way from a PyTorch training loop to something real people can use — agentic research tools, retrieval pipelines, and computer-vision models, deployed behind Flask and FastAPI.</p>
         <div class="stat-strip" id="statStrip"></div>
         <div class="cta-row">
           <a href="Rahid_Khan_CV.pdf" download class="btn btn-primary">↓ Download Résumé</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          <a href="#projects" class="btn btn-ghost">View projects</a>
           <a href="https://github.com/Rahid-Khan" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
         </div>
       </div>
       <div class="hero-visual">
         <canvas id="pipelineCanvas" aria-hidden="true"></canvas>
+        <span class="corner tl"></span><span class="corner br"></span>
         <span class="live"><span class="d"></span>LIVE SYSTEM</span>
         <span class="tag">MCP research-agent · architecture render</span>
       </div>
@@ -390,14 +438,14 @@
 
   <section id="about">
     <div class="wrap">
-      <div class="section-head"><p class="eyebrow">01 · Knowledge base</p><h2>What I'm building toward</h2></div>
+      <div class="section-head" data-reveal><p class="eyebrow">01 · About</p><h2>A bit about me</h2></div>
       <div class="about-grid">
-        <div>
-          <p>Rahid Khan is an <strong>AI Engineer and Machine Learning Engineer</strong> based in Peshawar, Pakistan, and an <strong>Artificial Intelligence undergraduate</strong> (BS, expected 2027) with hands-on experience building and deploying machine learning systems in Python, PyTorch, and TensorFlow.</p>
-          <p>Practical exposure spans <strong>computer vision</strong> (CNN and Vision Transformer models), <strong>NLP</strong>, and <strong>LLM-based agent systems</strong> — including a research-automation agent built on the Model Context Protocol (MCP), integrating LangChain with Groq LLM inference.</p>
-          <p>Comfortable across the full pipeline: data preprocessing, model training and evaluation, and deployment via Flask and FastAPI web applications. Currently seeking an <strong>AI/ML Engineering or GenAI Engineering</strong> role to grow these skills in production settings.</p>
+        <div data-reveal>
+          <p>I'm an <strong>AI and Machine Learning Engineer</strong> from Peshawar, Pakistan, currently finishing my <strong>BS in Artificial Intelligence</strong> (expected 2027). Most of my time goes into building and shipping machine learning systems in Python, PyTorch, and TensorFlow — not just training models, but getting them into people's hands.</p>
+          <p>I've worked across <strong>computer vision</strong> (CNN and Vision Transformer models), <strong>NLP</strong>, and <strong>LLM-based agent systems</strong>. My favorite build so far is a research-automation agent on the Model Context Protocol (MCP) that connects LangChain to Groq-hosted LLMs — it turned a tedious literature-search workflow into a single conversation.</p>
+          <p>I'm comfortable owning the whole pipeline: data preprocessing, training and evaluation, then deployment as a Flask or FastAPI app. Right now I'm looking for an <strong>AI/ML or GenAI Engineering</strong> role where I can do that in a real production setting, alongside people I can learn from.</p>
         </div>
-        <div class="about-cards">
+        <div class="about-cards" data-reveal>
           <div class="fact-card"><div class="k">Full name</div><div class="v">Rahid Khan Afridi</div></div>
           <div class="fact-card"><div class="k">Focus</div><div class="v">Agentic AI · RAG · Computer Vision</div></div>
           <div class="fact-card"><div class="k">Core stack</div><div class="v">Python, PyTorch, TensorFlow, LangChain</div></div>
@@ -412,10 +460,10 @@
 
   <section id="skills">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">02 · Modules loaded</p>
-        <h2>Technical toolkit</h2>
-        <p>Grouped the way it's actually used. Click any skill to see which project relies on it.</p>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">02 · Skills</p>
+        <h2>What I work with</h2>
+        <p>Grouped the way I actually use it day to day. Click any skill and I'll show you which project it powered.</p>
       </div>
       <div class="skills-grid" id="skillsGrid"></div>
     </div>
@@ -423,21 +471,21 @@
 
   <section id="timeline">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <p class="eyebrow">03 · Timeline</p>
-        <h2>Education &amp; certifications</h2>
-        <p>Formal training runs alongside applied project work — the projects below are where the theory gets tested.</p>
+        <h2>Where I've studied</h2>
+        <p>The classroom gave me the theory — the projects below are where I actually test it.</p>
       </div>
-      <div class="timeline" id="timelineList"></div>
+      <div class="timeline" id="timelineList" data-reveal></div>
     </div>
   </section>
 
   <section id="projects">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <p class="eyebrow">04 · Case studies</p>
-        <h2>Selected projects</h2>
-        <p>Three systems spanning agentic tool-use, applied computer vision, and multi-tenant RAG infrastructure — architecture, real metrics, and outcomes.</p>
+        <h2>Things I've built</h2>
+        <p>Three systems I designed and built end-to-end — agentic tool-use, applied computer vision, and multi-tenant RAG. For each one: the problem I was solving, the architecture, and what came out of it.</p>
       </div>
       <div id="projectsList"></div>
     </div>
@@ -445,22 +493,22 @@
 
   <section id="research">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <p class="eyebrow">05 · Research</p>
-        <h2>Research interests</h2>
-        <p>No formal publications yet — this is the direction current project work is pointed at.</p>
+        <h2>What I'm curious about</h2>
+        <p>No formal publications yet — but this is where my curiosity is pointed, and my current projects are how I'm exploring it.</p>
       </div>
-      <div class="research-grid" id="researchGrid"></div>
+      <div class="research-grid" id="researchGrid" data-reveal></div>
     </div>
   </section>
 
   <section id="github">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <p class="eyebrow">06 · GitHub<span class="gh-live"><span class="d"></span>fetched live from api.github.com</span></p>
-        <h2>Live activity</h2>
+        <h2>What I've been coding lately</h2>
       </div>
-      <div class="gh-panel" id="ghPanel">
+      <div class="gh-panel" id="ghPanel" data-reveal>
         <div class="mono" style="color:var(--text-faint); font-size:13px;">Connecting to GitHub…</div>
       </div>
       <div class="gh-repos" id="ghRepos"></div>
@@ -469,19 +517,19 @@
 
   <section id="terminal">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">07 · Interactive</p>
-        <h2>Terminal &amp; local assistant</h2>
-        <p>A real command shell, plus a lightweight Q&amp;A assistant below it — both wired to the same profile data. The assistant matches your question against Rahid's actual data; it is not a hosted LLM.</p>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">07 · Playground</p>
+        <h2>Explore my profile, your way</h2>
+        <p>If you'd rather poke around than scroll, here's a little terminal wired to my actual profile data — plus a Q&amp;A assistant below it. (Honest disclaimer: the assistant matches keywords against my real data, it's not a hosted LLM.)</p>
       </div>
-      <div class="term-wrap">
+      <div class="term-wrap" data-reveal>
         <div class="term-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="title">rahid@rk-os: ~</span></div>
         <div id="terminal-output" role="log" aria-live="polite"></div>
         <div class="term-input-row"><span class="ps">rahid@rk-os:~$</span><input id="terminal-input" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command input"></div>
       </div>
-      <p class="term-hint">Try: help · tree · cat projects.txt · roadmap · stats · sudo · theme violet</p>
+      <p class="term-hint">Try: help · tree · cat projects.txt · roadmap · stats · sudo · theme quantum</p>
 
-      <div class="chat-wrap">
+      <div class="chat-wrap" data-reveal>
         <div class="chat-head">Ask about Rahid <span>local knowledge match, not a hosted LLM</span></div>
         <div id="chat-log"></div>
         <div class="chat-suggest">
@@ -500,18 +548,17 @@
 
   <section id="contact" style="border-bottom:none;">
     <div class="wrap">
-      <div class="section-head"><p class="eyebrow">08 · Connect</p><h2>Let's build something</h2></div>
+      <div class="section-head" data-reveal><p class="eyebrow">08 · Connect</p><h2>Let's build something together</h2></div>
       <div class="contact-grid">
-        <div>
-          <div class="avail-badge"><span class="dot"></span>Open to AI/ML &amp; GenAI engineering roles</div>
-          <p style="color:var(--text-muted); font-size:15px; max-width:420px;">The fastest way to reach me is email — I usually reply within a day. Based in Peshawar, Pakistan, open to remote and relocation-friendly opportunities.</p>
+        <div data-reveal>
+          <p style="color:var(--text-muted); font-size:15px; max-width:420px;">Whether it's a role, a project, or just a question about something I've built — I'd genuinely love to hear from you. Email is the fastest way to reach me and I usually reply within a day. I'm based in Peshawar, Pakistan, and open to remote and relocation-friendly opportunities.</p>
           <div class="contact-facts">
             <span>📍 Peshawar, Pakistan</span>
             <span>🌐 UTC+5</span>
             <span>🎓 Graduating 2027</span>
           </div>
         </div>
-        <div class="contact-links">
+        <div class="contact-links" data-reveal>
           <a href="mailto:rahidka524@gmail.com"><span><span class="lbl">Email</span>rahidka524@gmail.com</span><span>↗</span></a>
           <a href="tel:+923070429192"><span><span class="lbl">Phone</span>+92 307 0429192</span><span>↗</span></a>
           <a href="https://github.com/Rahid-Khan" target="_blank" rel="noopener"><span><span class="lbl">GitHub</span>github.com/Rahid-Khan</span><span>↗</span></a>
@@ -522,7 +569,7 @@
     </div>
   </section>
 
-  <footer>Designed &amp; built by Rahid Khan (Rahid Khan Afridi) · <span id="year"></span> · RK</footer>
+  <footer>Designed &amp; built from scratch by Rahid Khan (Rahid Khan Afridi) · <span id="year"></span> · Thanks for scrolling all the way down.</footer>
 </main>
 
 <script>
@@ -564,7 +611,7 @@ const DATA = {
         "Automatic PDF retrieval and DOI/ArXiv citation extraction",
         "Packaged for local (Flask) and production (Gunicorn, Docker) deployment"
       ],
-      github: "https://github.com/Rahid-Khan"
+      github: "https://github.com/Rahid-Khan/research-model"
     },
     {
       title: "Eye Disease Classification System",
@@ -579,7 +626,7 @@ const DATA = {
         "Applied Grad-CAM visualizations to interpret model predictions",
         "Deployed behind a lightweight Flask app for interactive inference"
       ],
-      github: "https://github.com/Rahid-Khan"
+      github: "https://github.com/Rahid-Khan/eye-disease-"
     },
     {
       title: "Multi-User RAG Web Platform",
@@ -595,7 +642,7 @@ const DATA = {
         "Real-time token-by-token chat streaming via Server-Sent Events with source citations",
         "Usage analytics dashboard"
       ],
-      github: "https://github.com/Rahid-Khan"
+      github: "https://github.com/Rahid-Khan/fast-api-based-RAG"
     }
   ],
   research: [
@@ -609,58 +656,41 @@ const DATA = {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const THEMES = ['neural','quantum','matrix'];
+function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
 
-/* ============ BOOT SEQUENCE ============ */
-const bootEl = document.getElementById('boot');
-const bootLines = document.getElementById('bootLines');
-const bootSeq = [
-  "Initializing AI Engineer OS...",
-  "Loading knowledge base...",
-  "Loading projects [3/3]...",
-  "Loading skills matrix [34 nodes]...",
-  "Establishing GitHub link...",
-  "System ready."
-];
-function runBoot(){
-  if (reducedMotion){ bootEl.classList.add('hide'); setTimeout(()=>bootEl.remove(), 200); return; }
-  bootSeq.forEach((line,i)=>{
-    setTimeout(()=>{
-      const d = document.createElement('div');
-      d.className = 'boot-line';
-      d.style.animationDelay = '0s';
-      d.textContent = '> ' + line;
-      bootLines.appendChild(d);
-    }, i*260);
-  });
-  const bar = document.createElement('div');
-  bar.className = 'bar';
-  bar.innerHTML = '<div class="bar-fill" id="bootBarFill"></div>';
-  bootLines.appendChild(bar);
-  const skip = document.createElement('div');
-  skip.className = 'skip';
-  skip.textContent = 'click anywhere to skip';
-  bootLines.appendChild(skip);
-  setTimeout(()=>{ const f = document.getElementById('bootBarFill'); if (f) f.style.width = '100%'; }, 80);
-  setTimeout(finishBoot, bootSeq.length*260 + 700);
-}
-function finishBoot(){
-  if (bootEl.classList.contains('hide')) return;
-  bootEl.classList.add('hide');
-  setTimeout(()=> bootEl.remove(), 550);
-}
-bootEl.addEventListener('click', finishBoot);
-runBoot();
-
-/* ============ THEME SWITCH ============ */
+/* ============ THEME SWITCH (persisted + restored) ============ */
 function setTheme(t){
+  if (!THEMES.includes(t)) return;
   document.documentElement.setAttribute('data-theme', t);
   try{ localStorage.setItem('rk-theme', t); }catch(e){}
+  document.querySelectorAll('.theme-swatches button').forEach(b=> b.classList.toggle('active', b.dataset.t===t));
 }
 document.querySelectorAll('.theme-swatches button').forEach(b=>{
   b.addEventListener('click', ()=> setTheme(b.dataset.t));
+  b.classList.toggle('active', b.dataset.t === document.documentElement.getAttribute('data-theme'));
 });
 
-/* ============ AMBIENT BACKGROUND ============ */
+/* ============ SCROLL PROGRESS BAR ============ */
+const progressEl = document.getElementById('scrollProgress');
+function updateProgress(){
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progressEl.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+updateProgress();
+
+/* ============ SCROLL REVEAL ============ */
+let revealObs = null;
+if (!reducedMotion){
+  revealObs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if (e.isIntersecting){ e.target.classList.add('in'); revealObs.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -8% 0px'});
+}
+function reveal(el){ if (revealObs) revealObs.observe(el); else el.classList.add('in'); }
+document.querySelectorAll('[data-reveal]').forEach(reveal);
+
+/* ============ AMBIENT NEURAL BACKGROUND ============ */
 const bgCanvas = document.getElementById('bgCanvas');
 const bgCtx = bgCanvas.getContext('2d');
 let bgW,bgH,bgDots=[];
@@ -673,18 +703,20 @@ function bgResize(){
   bgDots = Array.from({length:count}, ()=>({
     x: Math.random()*bgW, y: Math.random()*bgH,
     vx:(Math.random()-0.5)*0.15*devicePixelRatio, vy:(Math.random()-0.5)*0.15*devicePixelRatio,
-    r: (1+Math.random()*1.6)*devicePixelRatio
+    r: (1+Math.random()*1.6)*devicePixelRatio,
+    alt: Math.random() < 0.35
   }));
 }
 bgResize();
 window.addEventListener('resize', bgResize);
 function bgFrame(){
   bgCtx.clearRect(0,0,bgW,bgH);
-  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#6EE7D8';
-  bgCtx.fillStyle = accent;
+  const accent = cssVar('--accent') || '#38BDF8';
+  const accent2 = cssVar('--accent2') || '#818CF8';
   bgDots.forEach(d=>{
     if(!reducedMotion){ d.x+=d.vx; d.y+=d.vy; if(d.x<0)d.x=bgW; if(d.x>bgW)d.x=0; if(d.y<0)d.y=bgH; if(d.y>bgH)d.y=0; }
-    bgCtx.globalAlpha = 0.18;
+    bgCtx.globalAlpha = 0.2;
+    bgCtx.fillStyle = d.alt ? accent2 : accent;
     bgCtx.beginPath(); bgCtx.arc(d.x,d.y,d.r,0,Math.PI*2); bgCtx.fill();
   });
   bgCtx.globalAlpha = 1;
@@ -714,8 +746,21 @@ const stats = [
 const statStrip = document.getElementById('statStrip');
 stats.forEach(([num,lbl])=>{
   const d = document.createElement('div'); d.className='stat';
-  d.innerHTML = `<div class="num">${num}</div><div class="lbl">${lbl}</div>`;
+  d.innerHTML = `<div class="num">0</div><div class="lbl">${lbl}</div>`;
   statStrip.appendChild(d);
+  const numEl = d.querySelector('.num');
+  const str = String(num);
+  const target = parseInt(str, 10) || 0;
+  const suffix = str.replace(/^\d+/, '');
+  if (reducedMotion || target === 0){ numEl.textContent = str; return; }
+  const dur = 1600, t0 = performance.now();
+  function tick(now){
+    const p = Math.min((now - t0) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    numEl.textContent = Math.round(target * eased) + (p === 1 ? suffix : '');
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
 });
 
 /* ============ RENDER: SKILLS (with project cross-links) ============ */
@@ -727,8 +772,10 @@ const skillsGrid = document.getElementById('skillsGrid');
 Object.entries(DATA.skills).forEach(([cat, items]) => {
   const card = document.createElement('div');
   card.className = 'skill-card';
+  card.setAttribute('data-reveal','');
   card.innerHTML = `<h3>${cat}</h3><div class="chip-row">${items.map(i=>`<span class="chip" data-skill="${i}">${i}</span>`).join('')}</div><div class="chip-used" data-used-for="${cat}"></div>`;
   skillsGrid.appendChild(card);
+  reveal(card);
 });
 skillsGrid.querySelectorAll('.chip').forEach(chip=>{
   chip.addEventListener('click', ()=>{
@@ -746,11 +793,16 @@ skillsGrid.querySelectorAll('.chip').forEach(chip=>{
   });
 });
 
-/* ============ RENDER: TIMELINE ============ */
+/* ============ RENDER: TIMELINE (education + certifications) ============ */
 const tl = document.getElementById('timelineList');
 DATA.education.forEach(e => {
   const div = document.createElement('div'); div.className = 't-item';
   div.innerHTML = `<div class="t-date">${e.date}</div><h3>${e.degree}</h3><div class="t-sub">${e.institution}</div>`;
+  tl.appendChild(div);
+});
+DATA.certifications.forEach(c => {
+  const div = document.createElement('div'); div.className = 't-item';
+  div.innerHTML = `<div class="t-date">${c.date}</div><h3>${c.name}</h3><div class="t-sub">${c.issuer} — certification</div>`;
   tl.appendChild(div);
 });
 
@@ -760,6 +812,7 @@ DATA.projects.forEach(p => {
   const div = document.createElement('div');
   div.className = 'project';
   div.setAttribute('data-title', p.title);
+  div.setAttribute('data-reveal','');
   div.innerHTML = `
     <div class="project-top">
       <h3>${p.title}</h3>
@@ -773,6 +826,7 @@ DATA.projects.forEach(p => {
     <ul>${p.features.map(f=>`<li>${f}</li>`).join('')}</ul>
   `;
   pl.appendChild(div);
+  reveal(div);
 });
 
 /* ============ RENDER: RESEARCH ============ */
@@ -783,13 +837,6 @@ DATA.research.forEach(r=>{
   rg.appendChild(d);
 });
 
-/* ============ RENDER: CERTS via timeline continuation + LANGUAGES ============ */
-DATA.certifications.forEach(c => {
-  const div = document.createElement('div'); div.className = 't-item';
-  div.innerHTML = `<div class="t-date">${c.date}</div><h3>${c.name}</h3><div class="t-sub">${c.issuer} — certification</div>`;
-  tl.appendChild(div);
-});
-
 /* ============ HERO ROLE TYPER ============ */
 const roleTyper = document.getElementById('roleTyper');
 if (!reducedMotion) {
@@ -797,16 +844,16 @@ if (!reducedMotion) {
   function typeLoop(){
     const word = DATA.roles[ri];
     ci = deleting ? ci-1 : ci+1;
-    roleTyper.innerHTML = word.slice(0,ci) + '<span class="cursor"></span>';
+    roleTyper.innerHTML = '<span class="prefix">&gt;</span> ' + word.slice(0,ci) + '<span class="cursor"></span>';
     let delay = deleting ? 40 : 70;
     if (!deleting && ci===word.length){ delay=1400; deleting=true; }
     else if (deleting && ci===0){ deleting=false; ri=(ri+1)%DATA.roles.length; delay=300; }
     setTimeout(typeLoop, delay);
   }
   typeLoop();
-} else { roleTyper.textContent = DATA.roles.join(' · '); }
+} else { roleTyper.innerHTML = '<span class="prefix">&gt;</span> ' + DATA.roles.join(' · '); }
 
-/* ============ HERO CANVAS: agent pipeline ============ */
+/* ============ HERO CANVAS: agent pipeline (theme-aware colors) ============ */
 const canvas = document.getElementById('pipelineCanvas');
 const ctx = canvas.getContext('2d');
 let W,H,center,out,sources;
@@ -827,7 +874,7 @@ function drawNode(p,r,color,label,side){
   ctx.beginPath(); ctx.arc(p.x,p.y,r,0,Math.PI*2); ctx.fillStyle=color;
   ctx.shadowColor=color; ctx.shadowBlur=14*devicePixelRatio; ctx.fill(); ctx.shadowBlur=0;
   if (label){
-    ctx.font = `${11*devicePixelRatio}px 'IBM Plex Mono', monospace`;
+    ctx.font = `${11*devicePixelRatio}px 'JetBrains Mono', monospace`;
     ctx.fillStyle = 'rgba(200,210,220,0.65)'; ctx.textBaseline='middle';
     if (side==='right'){ ctx.textAlign='left'; ctx.fillText(label, p.x+r+8*devicePixelRatio, p.y); }
     else { ctx.textAlign='right'; ctx.fillText(label, p.x-r-8*devicePixelRatio, p.y); }
@@ -838,12 +885,15 @@ function makeParticle(){ const s = sources[Math.floor(Math.random()*sources.leng
 let spawnTimer = 0;
 function animate(){
   ctx.clearRect(0,0,W,H);
-  ctx.strokeStyle = 'rgba(110,231,216,0.10)'; ctx.lineWidth = 1*devicePixelRatio;
+  const accent = cssVar('--accent') || '#38BDF8';
+  const accent2 = cssVar('--accent2') || '#818CF8';
+  const accentRgb = cssVar('--accent-rgb') || '56,189,248';
+  ctx.strokeStyle = `rgba(${accentRgb},0.12)`; ctx.lineWidth = 1*devicePixelRatio;
   sources.forEach(s=>{ ctx.beginPath(); ctx.moveTo(s.x,s.y); ctx.lineTo(center.x,center.y); ctx.stroke(); });
   ctx.beginPath(); ctx.moveTo(center.x,center.y); ctx.lineTo(out.x,out.y); ctx.stroke();
-  sources.forEach(s=> drawNode(s, 4.5*devicePixelRatio, '#4FA79B', s.label, 'right'));
-  drawNode(center, 9*devicePixelRatio, '#6EE7D8', 'LLM Agent', 'right');
-  drawNode(out, 6*devicePixelRatio, '#F5A623', 'Output', 'right');
+  sources.forEach(s=> drawNode(s, 4.5*devicePixelRatio, `rgba(${accentRgb},0.6)`, s.label, 'right'));
+  drawNode(center, 9*devicePixelRatio, accent, 'LLM Agent', 'right');
+  drawNode(out, 6*devicePixelRatio, accent2, 'Output', 'right');
   if (!reducedMotion){ spawnTimer++; if (spawnTimer>34){ particles.push(makeParticle()); spawnTimer=0; } }
   ctx.globalCompositeOperation='lighter';
   particles.forEach(p=>{
@@ -851,7 +901,7 @@ function animate(){
     if (p.leg===0){ x=p.sx+(center.x-p.sx)*p.t; y=p.sy+(center.y-p.sy)*p.t; if (p.t>=1){p.leg=1;p.t=0;} }
     else { x=center.x+(out.x-center.x)*p.t; y=center.y+(out.y-center.y)*p.t; }
     ctx.beginPath(); ctx.arc(x,y,2.4*devicePixelRatio,0,Math.PI*2);
-    ctx.fillStyle = p.leg===0 ? 'rgba(110,231,216,0.9)' : 'rgba(245,166,35,0.95)'; ctx.fill();
+    ctx.fillStyle = p.leg===0 ? accent : accent2; ctx.fill();
   });
   particles = particles.filter(p=> !(p.leg===1 && p.t>=1));
   ctx.globalCompositeOperation='source-over';
@@ -897,15 +947,15 @@ async function loadGithub(){
 }
 loadGithub();
 
-/* ============ SCROLL SPY: highlights current section in the mobile/menu list ============ */
-const navLinks = document.querySelectorAll('.mobile-menu a');
+/* ============ SCROLL SPY: highlights current section in desktop nav + mobile menu ============ */
+const navLinkEls = document.querySelectorAll('.nav-links a, .mobile-menu a');
 const sectionIds = ['#hero','#about','#skills','#timeline','#projects','#research','#github','#terminal','#contact'];
 const sectionEls = sectionIds.map(id=>document.querySelector(id)).filter(Boolean);
 const spy = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if (entry.isIntersecting){
       const id = '#'+entry.target.id;
-      navLinks.forEach(a=> a.style.color = (a.getAttribute('href')===id) ? 'var(--accent)' : '');
+      navLinkEls.forEach(a=> a.classList.toggle('active', a.getAttribute('href')===id));
     }
   });
 }, {rootMargin:'-40% 0px -50% 0px'});
@@ -928,11 +978,11 @@ const skillsFlat = Object.entries(DATA.skills).map(([k,v])=>`  ${k}: ${v.join(',
 const commands = {
   help: () => `Available commands:
   about   skills   education   certifications
-  projects  research  github   contact
-  roadmap  timeline  achievements  stats
+  projects  research  github   contact   socials
+  experience  availability  roadmap  timeline  stats
   whoami  neofetch  date   resume/downloads
-  tree    ls   pwd   cat <file>   man <cmd>
-  theme <signal|violet|mono>   clear   history   sudo`,
+  tree    ls   pwd   cat <file>   man <cmd>   echo <text>
+  theme <neural|quantum|matrix>   clear   history   sudo`,
   about: () => DATA.summary,
   skills: () => skillsFlat,
   education: () => DATA.education.map(e=> `${e.degree} — ${e.institution} (${e.date})`).join('\n'),
@@ -941,6 +991,19 @@ const commands = {
   projects: () => DATA.projects.map((p,i)=> `${i+1}. ${p.title}\n   stack: ${p.stack.join(', ')}\n   ${p.description}`).join('\n\n'),
   research: () => DATA.research.map(r=> `${r.title}\n  ${r.body}`).join('\n\n') + '\n\n(no formal publications yet)',
   contact: () => `Email:  ${DATA.email}\nPhone:  ${DATA.phone}\nGitHub: ${DATA.github}\nLinkedIn: ${DATA.linkedin}`,
+  socials: () => `GitHub:   ${DATA.github}\nLinkedIn: ${DATA.linkedin}`,
+  summary: () => DATA.summary,
+  experience: () => `Project-based experience (designed, built & deployed end-to-end):
+  1. MCP-Based AI Research Agent — LangChain + Groq + 44 MCP tools
+  2. Eye Disease Classification System — CNN vs ViT with Grad-CAM
+  3. Multi-User RAG Web Platform — FastAPI + FAISS + BYOK
+Plus: NAVTTC AI & Machine Learning Training Program (2024).
+Currently seeking a first industry AI/ML or GenAI engineering role.`,
+  availability: () => `Status: open to AI/ML & GenAI engineering roles (incl. internships)
+Location: ${DATA.location} (UTC+5) — remote & relocation friendly
+Fastest contact: ${DATA.email}`,
+  hire: () => commands.availability(),
+  status: () => commands.availability(),
   github: () => { window.open(DATA.github,'_blank'); return `Opening ${DATA.github} ...`; },
   linkedin: () => { window.open(DATA.linkedin,'_blank'); return `Opening ${DATA.linkedin} ...`; },
   email: () => DATA.email,
@@ -966,8 +1029,9 @@ const commands = {
 └── resume.pdf`,
   'cat about.txt': () => DATA.summary,
   'cat skills.txt': () => skillsFlat,
-  'cat projects.txt': () => DATA.projects.map(p=>p.title).join('\n'),
+  'cat projects.txt': () => DATA.projects.map(p=>`${p.title} — ${p.github}`).join('\n'),
   'cat research.txt': () => DATA.research.map(r=>r.title).join('\n'),
+  'cat resume.pdf': () => { window.open('Rahid_Khan_CV.pdf','_blank'); return 'Opening résumé PDF ...'; },
   history: () => history.length ? history.join('\n') : '(empty)',
   clear: () => { outputEl.innerHTML=''; return null; },
   sudo: () => 'Nice try — no root on this system. 😉',
@@ -982,7 +1046,7 @@ const commands = {
 function manEntry(cmd){
   const m = {
     help:'Lists all available commands.', about:"Prints Rahid's professional summary.",
-    projects:'Lists project case studies with stack and description.', theme:'Usage: theme <signal|violet|mono> — switches the accent palette.'
+    projects:'Lists project case studies with stack and description.', theme:'Usage: theme <neural|quantum|matrix> — switches the accent palette.'
   };
   return m[cmd] || `No manual entry for ${cmd}.`;
 }
@@ -993,12 +1057,15 @@ function runCommand(raw){
   const key = cmd.toLowerCase();
   if (key.startsWith('theme ')){
     const t = key.split(' ')[1];
-    if (['signal','violet','mono'].includes(t)){ setTheme(t); printLine(`Theme switched to "${t}".`); }
-    else printLine(`Unknown theme "${t}". Try: signal, violet, mono.`, 'err');
-    inputEl.value=''; return;
+    if (THEMES.includes(t)){ setTheme(t); printLine(`Theme switched to "${t}".`); }
+    else printLine(`Unknown theme "${t}". Try: neural, quantum, matrix.`, 'err');
+    return;
   }
   if (key.startsWith('man ')){
     printLine(manEntry(key.split(' ')[1])); return;
+  }
+  if (key.startsWith('echo ')){
+    printLine(escapeHtml(cmd.slice(5))); return;
   }
   if (commands[key]){
     const result = commands[key]();
@@ -1013,8 +1080,8 @@ inputEl.addEventListener('keydown', (e)=>{
   else if (e.key==='ArrowDown'){ e.preventDefault(); if (historyIdx<history.length){ historyIdx++; inputEl.value = history[historyIdx]||''; } }
   else if (e.key==='Tab'){ e.preventDefault(); const partial = inputEl.value.toLowerCase(); const match = Object.keys(commands).find(c=>c.startsWith(partial)); if (match) inputEl.value = match; }
 });
-printLine('rahid@rk-os — interactive terminal v2.0');
-printLine('Type <span style="color:var(--accent)">help</span> to see available commands.\n');
+printLine('Welcome — this is my portfolio\'s little terminal. Make yourself at home.');
+printLine('Type <span style="color:var(--accent)">help</span> to see what you can do.\n');
 document.querySelector('.term-wrap').addEventListener('click', ()=> inputEl.focus());
 
 /* ============ LOCAL Q&A ASSISTANT (keyword-matched, not a hosted LLM) ============ */
@@ -1023,26 +1090,109 @@ const chatInput = document.getElementById('chat-input');
 const chatSend = document.getElementById('chat-send');
 
 const knowledgeBase = [
-  { keys:['technolog','stack','know','skill','tools'], answer: `Rahid's core toolkit: ${skillsFlat.replace(/\n/g,' | ')}` },
-  { keys:['mcp','research agent','agent'], answer: DATA.projects[0].description + ' Key stats: 44+ MCP tools across 5 servers (ArXiv, Semantic Scholar, PubMed, CrossRef, Web).' },
-  { keys:['eye','vision','classif','medical','cnn','vit'], answer: DATA.projects[1].description + ' It compares CNN vs. Vision Transformer architectures and uses Grad-CAM for interpretability.' },
-  { keys:['rag','platform','multi-user','multi user'], answer: DATA.projects[2].description + ' Supports 8 file formats and bring-your-own-key across 4 LLM providers.' },
-  { keys:['education','degree','university','study'], answer: `${DATA.education[0].degree} at ${DATA.education[0].institution} (${DATA.education[0].date}).` },
-  { keys:['certif'], answer: DATA.certifications.map(c=>`${c.name} — ${c.issuer} (${c.date})`).join('; ') },
-  { keys:['contact','email','reach','hire'], answer: `Reach Rahid at ${DATA.email} or ${DATA.phone}. GitHub: ${DATA.github} · LinkedIn: ${DATA.linkedin}` },
-  { keys:['location','where','based'], answer: `Rahid is based in ${DATA.location}.` },
-  { keys:['language'], answer: `Spoken languages: ${DATA.languages.join(', ')}.` },
-  { keys:['research','interest','paper','publicat'], answer: DATA.research.map(r=>r.title).join(', ') + '. No formal publications yet — these are active project directions.' },
-  { keys:['about','who is','summary','background'], answer: DATA.summary }
+  /* conversational */
+  { keys:['hi','hello','hey','salam','assalam','greetings','good morning','good afternoon','good evening','how are you'],
+    answer: "Hello! Great to have you here. Ask me anything about Rahid — his skills, projects, education, availability, or how to reach him." },
+  { keys:['thank','thanks','shukriya','appreciate','helpful'],
+    answer: `You're welcome! If you'd like to go deeper, Rahid usually replies within a day at ${DATA.email}.` },
+  { keys:['bye','goodbye','see you','later'],
+    answer: "Thanks for stopping by! Feel free to grab the résumé or drop Rahid an email before you go." },
+  { keys:['who are you','what are you','are you ai','are you a bot','are you an llm','chatgpt','gpt','are you real'],
+    answer: "I'm a small assistant built right into this page. I match your question against Rahid's real profile data — no hosted LLM, no API calls, just honest keyword matching." },
+  { keys:['help','what can i ask','what can you','options','commands'],
+    answer: "You can ask me about: his skills & tech stack · the three main projects (MCP research agent, eye-disease classifier, RAG platform) · education & certifications · availability & hiring · contact details · research interests · languages · location." },
+
+  /* identity & background */
+  { keys:['who is rahid','about rahid','about him','introduce','introduction','background','summary','tell me about rahid','profile'],
+    answer: DATA.summary },
+  { keys:['full name','afridi','real name','his name'],
+    answer: "His full name is Rahid Khan Afridi — he usually goes by Rahid Khan." },
+  { keys:['age','old is he','birthday'],
+    answer: "That's not something listed in his profile — but he's an undergraduate expecting to finish his BS in Artificial Intelligence in 2027." },
+
+  /* skills — general and specific */
+  { keys:['technolog','stack','skill','tools','toolkit','know how','what does he know','tech he uses','proficien'],
+    answer: `Rahid's core toolkit: ${skillsFlat.replace(/\n/g,' | ')}` },
+  { keys:['python','c++','sql','programming language','coding','code in'],
+    answer: "Python is his primary language — used across every project for ML, agents, and APIs. He also works with C++ and SQL." },
+  { keys:['pytorch','tensorflow','scikit','deep learning','machine learning','neural network','training','fine-tun','fine tun','transfer learning','model'],
+    answer: "His ML/DL stack is PyTorch and TensorFlow (plus Scikit-learn), covering CNN architectures, Vision Transformers, transfer learning, fine-tuning, and Grad-CAM interpretability. The eye-disease classifier is the best example — CNN vs ViT trained, evaluated, and deployed." },
+  { keys:['langchain','llm','genai','generative','prompt','groq','llama','openai','anthropic','claude','model context'],
+    answer: "On the GenAI side he works with LangChain, LLM agents, the Model Context Protocol (MCP), RAG, prompt engineering, and Groq-hosted Llama models (3.3 70B / Llama 4). Both the MCP research agent and the RAG platform are built on this stack." },
+  { keys:['docker','deploy','production','gunicorn','api','backend','flask','fastapi','rest','server'],
+    answer: "He deploys everything he builds: Flask and FastAPI apps, REST APIs, Docker containers, and Gunicorn for production. All three portfolio projects ship with a working web interface or API." },
+  { keys:['pandas','numpy','matplotlib','data preprocessing','feature engineering','data processing','dataset'],
+    answer: "For data work he uses Pandas, NumPy, and Matplotlib — plus hands-on preprocessing, augmentation, and feature engineering (see the eye-disease pipeline)." },
+  { keys:['faiss','vector','embedding','database','sqlalchemy','sqlite'],
+    answer: "He works with FAISS for vector search (per-user isolated indexes in the RAG platform), plus SQLAlchemy and SQLite for relational data." },
+
+  /* projects */
+  { keys:['mcp','research agent','research-model','literature','arxiv','pubmed','semantic scholar','crossref','automation agent'],
+    answer: DATA.projects[0].description + " Key stats: 44+ MCP tools across 5 servers (ArXiv, Semantic Scholar, PubMed, CrossRef, Web). Source: " + DATA.projects[0].github },
+  { keys:['eye','vision','classif','medical','retinal','cnn','vit','grad-cam','gradcam','disease'],
+    answer: DATA.projects[1].description + " It compares CNN vs. Vision Transformer architectures and uses Grad-CAM for interpretability. Source: " + DATA.projects[1].github },
+  { keys:['rag','retrieval','multi-user','multi user','knowledge base','document','upload','chat with','byok'],
+    answer: DATA.projects[2].description + " Supports 8 file formats and bring-your-own-key across 4 LLM providers, with per-user FAISS isolation. Source: " + DATA.projects[2].github },
+  { keys:['best project','favorite','favourite','proud','coolest','most impressive'],
+    answer: "His favorite build is the MCP-based AI research agent — it connects an LLM to 44+ tools across 5 research servers and turned a tedious literature-search workflow into a single conversation. " + DATA.projects[0].github },
+  { keys:['project','built','portfolio','work he has done','case stud'],
+    answer: "Three main projects: 1) MCP-Based AI Research Agent (LangChain + Groq + 44 MCP tools), 2) Eye Disease Classification System (CNN vs ViT with Grad-CAM), 3) Multi-User RAG Web Platform (FastAPI + FAISS + BYOK). Scroll up to the Projects section for the full case studies, or ask me about any of them by name." },
+
+  /* education & experience */
+  { keys:['education','degree','universit','study','studied','bachelor','bs in','city university','student'],
+    answer: `${DATA.education[0].degree} at ${DATA.education[0].institution} (${DATA.education[0].date}).` },
+  { keys:['graduat','2027','finish','final year'],
+    answer: "He's expected to graduate in 2027 with a BS in Artificial Intelligence from CITY University of Science & Information Technology, Peshawar." },
+  { keys:['certif','navttc','course','training program'],
+    answer: DATA.certifications.map(c=>`${c.name} — ${c.issuer} (${c.date})`).join('; ') },
+  { keys:['experience','intern','worked at','company','employment','job history','years of'],
+    answer: "Rahid's experience so far is project-based: he has designed, built, and deployed three production-grade systems end-to-end (an MCP research agent, a medical-image classifier, and a multi-user RAG platform), alongside NAVTTC's AI & ML training program. He's now looking for his first industry AI/ML role." },
+
+  /* hiring & logistics */
+  { keys:['hire','hiring','available','availability','job','role','position','opportunit','recruit','vacancy','join','looking for','open to'],
+    answer: `Yes — Rahid is actively open to AI/ML and GenAI engineering roles (including internships). He's open to remote work and relocation. Fastest way to start the conversation: ${DATA.email}` },
+  { keys:['remote','relocat','onsite','on-site','timezone','time zone','utc','work from'],
+    answer: "He's based in Peshawar, Pakistan (UTC+5) and open to remote roles as well as relocation-friendly opportunities." },
+  { keys:['salary','pay','compensation','rate','charge'],
+    answer: `That's a conversation best had with Rahid directly — reach him at ${DATA.email}.` },
+
+  /* contact */
+  { keys:['contact','email','reach','get in touch','connect','message','talk to'],
+    answer: `Reach Rahid at ${DATA.email} (fastest, usually replies within a day). GitHub: ${DATA.github} · LinkedIn: ${DATA.linkedin}` },
+  { keys:['phone','call','number','whatsapp','mobile'],
+    answer: `His phone number is ${DATA.phone} — though email (${DATA.email}) is usually the fastest way to get a reply.` },
+  { keys:['github','repo','source code','repositories'],
+    answer: `His GitHub is ${DATA.github} — the three portfolio projects each link to their own repository, and the GitHub section above shows his latest activity live.` },
+  { keys:['linkedin'],
+    answer: `You'll find him on LinkedIn at ${DATA.linkedin}.` },
+  { keys:['resume','cv','résumé','download'],
+    answer: "You can download his résumé (PDF) from the button at the top of the page, or from the Contact section at the bottom." },
+
+  /* misc */
+  { keys:['location','where','based','from','city','pakistan','peshawar','live'],
+    answer: `Rahid is based in ${DATA.location} (UTC+5).` },
+  { keys:['language','speak','urdu','pashto','english'],
+    answer: `He speaks ${DATA.languages.join(', ')}.` },
+  { keys:['research','interest','paper','publicat','phd','academic'],
+    answer: DATA.research.map(r=>r.title).join(', ') + ". No formal publications yet — these are active directions his project work is exploring." }
 ];
 function matchAnswer(q){
-  const lower = q.toLowerCase();
+  const lower = ' ' + q.toLowerCase().replace(/[^a-z0-9+#.\s-]/g, ' ').replace(/\s+/g, ' ').trim() + ' ';
   let best = null, bestScore = 0;
   knowledgeBase.forEach(entry=>{
-    const score = entry.keys.reduce((acc,k)=> acc + (lower.includes(k) ? 1 : 0), 0);
+    let score = 0;
+    entry.keys.forEach(k=>{
+      if (k.length <= 4){
+        // short keys need word boundaries so "hi" doesn't match "this"
+        if (new RegExp('\\b' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b').test(lower)) score += 2;
+      } else if (lower.includes(k)){
+        score += k.length >= 9 ? 4 : 3; // longer phrase matches are stronger signals
+      }
+    });
     if (score > bestScore){ bestScore = score; best = entry; }
   });
-  return best ? best.answer : `I couldn't match that to something specific in Rahid's profile. Try asking about his skills, projects, education, or how to contact him — or use the terminal above for exact commands.`;
+  if (best) return best.answer;
+  return "Hmm, I couldn't match that to Rahid's profile. I know about his: skills & tech stack · projects (MCP agent, eye-disease classifier, RAG platform) · education · experience · availability for roles · research interests · contact details. Try one of those — or type \"help\" in the terminal above.";
 }
 function addMsg(text, who){
   const d = document.createElement('div'); d.className = 'msg '+who; d.textContent = text;
@@ -1056,29 +1206,29 @@ function askChat(q){
 chatSend.addEventListener('click', ()=>{ askChat(chatInput.value); chatInput.value=''; });
 chatInput.addEventListener('keydown', (e)=>{ if (e.key==='Enter'){ askChat(chatInput.value); chatInput.value=''; } });
 document.querySelectorAll('.chat-suggest button').forEach(b=> b.addEventListener('click', ()=> askChat(b.dataset.q)));
-addMsg("Hi — I'm a local Q&A assistant grounded in Rahid's profile data (not a hosted LLM). Ask me about his skills, projects, or how to get in touch.", 'bot');
+addMsg("Hey there! I'm a small assistant that knows Rahid's real profile data (no hosted LLM behind me, promise). Ask me about his skills, his projects, or how to get in touch.", 'bot');
 
 /* ============ COMMAND PALETTE ============ */
 const cmdkOverlay = document.getElementById('cmdk-overlay');
 const cmdkInput = document.getElementById('cmdk-input');
 const cmdkList = document.getElementById('cmdk-list');
 const cmdkActions = [
-  {label:'Go to System (hero)', key:'nav', run:()=>document.querySelector('#hero').scrollIntoView({behavior:'smooth'})},
-  {label:'Go to Knowledge (about)', key:'nav', run:()=>document.querySelector('#about').scrollIntoView({behavior:'smooth'})},
-  {label:'Go to Modules (skills)', key:'nav', run:()=>document.querySelector('#skills').scrollIntoView({behavior:'smooth'})},
+  {label:'Go to Home (hero)', key:'nav', run:()=>document.querySelector('#hero').scrollIntoView({behavior:'smooth'})},
+  {label:'Go to About', key:'nav', run:()=>document.querySelector('#about').scrollIntoView({behavior:'smooth'})},
+  {label:'Go to Skills', key:'nav', run:()=>document.querySelector('#skills').scrollIntoView({behavior:'smooth'})},
   {label:'Go to Timeline', key:'nav', run:()=>document.querySelector('#timeline').scrollIntoView({behavior:'smooth'})},
   {label:'Go to Projects', key:'nav', run:()=>document.querySelector('#projects').scrollIntoView({behavior:'smooth'})},
   {label:'Go to Research', key:'nav', run:()=>document.querySelector('#research').scrollIntoView({behavior:'smooth'})},
   {label:'Go to GitHub', key:'nav', run:()=>document.querySelector('#github').scrollIntoView({behavior:'smooth'})},
-  {label:'Go to Terminal', key:'nav', run:()=>document.querySelector('#terminal').scrollIntoView({behavior:'smooth'})},
+  {label:'Go to Playground (terminal)', key:'nav', run:()=>document.querySelector('#terminal').scrollIntoView({behavior:'smooth'})},
   {label:'Go to Contact', key:'nav', run:()=>document.querySelector('#contact').scrollIntoView({behavior:'smooth'})},
   {label:'Download résumé', key:'action', run:()=>window.open('Rahid_Khan_CV.pdf','_blank')},
   {label:'Open GitHub profile', key:'action', run:()=>window.open(DATA.github,'_blank')},
   {label:'Open LinkedIn profile', key:'action', run:()=>window.open(DATA.linkedin,'_blank')},
   {label:'Email Rahid', key:'action', run:()=>window.location.href='mailto:'+DATA.email},
-  {label:'Theme: Signal (default)', key:'theme', run:()=>setTheme('signal')},
-  {label:'Theme: Violet', key:'theme', run:()=>setTheme('violet')},
-  {label:'Theme: Mono', key:'theme', run:()=>setTheme('mono')},
+  {label:'Theme: Neural (blue, default)', key:'theme', run:()=>setTheme('neural')},
+  {label:'Theme: Quantum (violet)', key:'theme', run:()=>setTheme('quantum')},
+  {label:'Theme: Matrix (green)', key:'theme', run:()=>setTheme('matrix')},
 ];
 let cmdkSel = 0;
 function renderCmdk(filter){
